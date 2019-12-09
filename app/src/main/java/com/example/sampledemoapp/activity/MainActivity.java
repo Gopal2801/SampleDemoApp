@@ -1,14 +1,11 @@
 package com.example.sampledemoapp.activity;
 
 import android.content.Context;
-import android.graphics.Movie;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
-
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -28,6 +25,7 @@ import com.example.sampledemoapp.models.SingleItemModel;
 import com.example.sampledemoapp.models.Song;
 import com.example.sampledemoapp.retrofit.APIClient;
 import com.example.sampledemoapp.retrofit.APIInterface;
+import com.example.sampledemoapp.utils.CommonValues;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +34,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CommonValues {
 
     private Toolbar toolbar;
 
@@ -136,6 +134,45 @@ public class MainActivity extends AppCompatActivity {
 
         if (aResponse != null) {
 
+            //For Songs
+            if (aResponse.getSongs() != null) {
+
+                HomeData aItem2 = new HomeData();
+
+                ArrayList<HomeData> aHomePageData2 = new ArrayList<HomeData>();
+
+                List<Song> aSongs = aResponse.getSongs();
+
+                if (aSongs.size() > 0) {
+
+                    ArrayList<HomeField> aItemList2 = new ArrayList<HomeField>();
+
+                    for (int k = 0; k < aSongs.size(); k++) {
+
+                        Song aItem = aSongs.get(k);
+
+                        HomeField aData = new HomeField();
+
+                        aData.setName(aItem.getName());
+
+                        aData.setUrl(aItem.getLogo());
+
+                        aItemList2.add(aData);
+
+                    }
+
+                    aItem2.setTitle(SONG_TITLE);
+
+                    aItem2.setHomeFiledListItem(aItemList2);
+
+                    aHomePageData2.add(aItem2);
+
+                    aHomePageFinalData.addAll(aHomePageData2);
+
+                }
+            }
+
+
             //For Album
 
             if (aResponse.getAlbums() != null) {
@@ -167,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
 
                     aItem1.setHomeFiledListItem(aAlbumList);
 
-                    aItem1.setTitle("Album");
+                    aItem1.setTitle(ALBUM_TITLE);
 
                     aHomePageData1.add(aItem1);
 
@@ -175,44 +212,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-
-            //For Songs
-            if (aResponse.getSongs() != null) {
-
-                HomeData aItem2 = new HomeData();
-
-                ArrayList<HomeData> aHomePageData2 = new ArrayList<HomeData>();
-
-                List<Song> aSongs = aResponse.getSongs();
-
-                if (aSongs.size() > 0) {
-
-                    ArrayList<HomeField> aItemList2 = new ArrayList<HomeField>();
-
-                    for (int k = 0; k < aSongs.size(); k++) {
-
-                        Song aItem = aSongs.get(k);
-
-                        HomeField aData = new HomeField();
-
-                        aData.setName(aItem.getName());
-
-                        aData.setUrl(aItem.getLogo());
-
-                        aItemList2.add(aData);
-
-                    }
-
-                    aItem2.setTitle("Songs");
-
-                    aItem2.setHomeFiledListItem(aItemList2);
-
-                    aHomePageData2.add(aItem2);
-
-                    aHomePageFinalData.addAll(aHomePageData2);
-
-                }
-            }
 
             //For Artist
 
@@ -242,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
 
-                    aItem3.setTitle("Artist");
+                    aItem3.setTitle(ARTISTS_TITLE);
 
                     aItem3.setHomeFiledListItem(aItemList3);
 
@@ -281,7 +280,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
 
-                    aItem4.setTitle("Category");
+                    aItem4.setTitle(CATEGORY_TITLE);
 
                     aItem4.setHomeFiledListItem(aItemList3);
 

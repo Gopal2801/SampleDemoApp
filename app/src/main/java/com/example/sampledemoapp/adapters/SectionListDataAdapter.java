@@ -9,13 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.sampledemoapp.R;
 import com.example.sampledemoapp.models.SingleItemModel;
+import com.example.sampledemoapp.utils.Helper;
 
 import java.util.ArrayList;
 
@@ -43,12 +41,14 @@ public class SectionListDataAdapter extends RecyclerView.Adapter<SectionListData
 
         holder.tvTitle.setText(singleItem.getName());
 
-        Glide.with(mContext)
+        Helper.loadImage(mContext, singleItem.getUrl(), holder.itemImage);
+
+       /* Glide.with(mContext)
                 .load(singleItem.getUrl())
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .centerCrop()
                 .error(R.drawable.ic_launcher_background)
-                .into(holder.itemImage);
+                .into(holder.itemImage);*/
     }
 
     @Override
