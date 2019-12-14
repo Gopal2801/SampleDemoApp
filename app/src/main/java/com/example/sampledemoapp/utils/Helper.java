@@ -1,6 +1,7 @@
 package com.example.sampledemoapp.utils;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -23,4 +24,11 @@ public class Helper {
                 .error(R.drawable.shadow)
                 .into(aTargetIM);
     }
+
+    public static Typeface setFontStyle(Context aContext) {
+        Typeface aType = Typeface.createFromAsset(aContext.getAssets(), "fonts/Roboto-Medium.ttf");
+        return aType;
+    }
+
+
 }

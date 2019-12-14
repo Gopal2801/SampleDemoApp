@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/sampledemoapp/adapters/RecyclerViewDataAdapter.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/sampledemoapp/adapters/SectionListDataAdapter.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/shadow.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/shadow_ping.xml" charset="windows-1252" />
   </component>
 </project>

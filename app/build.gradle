@@ -1,11 +1,13 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.sampledemoapp"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -35,4 +37,16 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:27.0.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
+    implementation "io.reactivex.rxjava2:rxjava:2.2.0"
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+}
+repositories {
+    mavenCentral()
 }

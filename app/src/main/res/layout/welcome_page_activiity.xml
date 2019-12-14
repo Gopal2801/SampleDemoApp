@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_spalsh">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black_alpha"
+        tools:ignore="MissingConstraints"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="18sp"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:id="@+id/welcome_header_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/welcom_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@string/font_robot_bold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Welcome"
+                    android:textColor="@color/white"
+                    android:textSize="44dp"></androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/onboard_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:fontFamily="@string/font_robot_bold"
+                    android:text="ON BOARD"
+
+                    android:textColor="@color/white"
+                    android:textSize="32sp"></androidx.appcompat.widget.AppCompatTextView>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/content_txt"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/welcome_content"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="normal"></androidx.appcompat.widget.AppCompatTextView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signup_BTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button"
+                android:fontFamily="@string/font_robot_bold"
+                android:text="Sign up"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/acc_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:text="Have an account? Cool!"
+
+                android:textColor="@color/white"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/login_TXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@string/font_robot_bold"
+                android:padding="5dp"
+                android:text="Log in then!"
+
+                android:textColor="@color/white"
+                android:textStyle="bold"></androidx.appcompat.widget.AppCompatTextView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,7 +34,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity implements CommonValues {
+public class SampleMainActivity extends AppCompatActivity implements CommonValues {
 
     private Toolbar toolbar;
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements CommonValues {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_activity_main);
 
         mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
 

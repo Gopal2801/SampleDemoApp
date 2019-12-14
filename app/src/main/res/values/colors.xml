@@ -3,7 +3,8 @@
     <color name="colorPrimary">#80D81B60</color>
     <color name="colorPrimaryDark">#80D81B60</color>
     <color name="colorAccent">#D81B60</color>
-
+    <color name="white">#ffffff</color>
+    <color name="color_alpha">#80D81B60</color>
     <color name="teal_050">#e0f2f1</color> <!-- Use with black text -->
     <color name="teal_100">#b2dfdb</color> <!-- Use with black text -->
     <color name="teal_200">#80cbc4</color> <!-- Use with black text -->
@@ -20,5 +21,7 @@
     <color name="teal_a700">#00bfa5</color> <!-- Use with black text -->
     <color name="black_transpenrt_40_op">#66000000</color>
     <color name="light_grey_alpha_s">#20ADACAC</color>
+    <color name="black">#000000</color>
+    <color name="black_alpha">#90000000</color>
 
 </resources>
